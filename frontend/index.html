@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Content</title>
+</head>
+<body>
+    <h2>Random Message Generator</h2>
+    <div id="contentArea">
+        <!-- Random message will appear here -->
+    </div>
+    <button onclick="displayRandomContent()">Generate New Message</button>
+
+    <script type="text/javascript">
+        function displayRandomContent() {
+            // Define an array of messages
+            var messages = [
+                'Hello world!',
+                'Welcome to my site!',
+                'Random content is fun!',
+                'Check out this message.'
+            ];
+
+            // Generate a random index
+            var randomIndex = Math.floor(Math.random() * messages.length);
+
+            // Get the random message
+            var randomMessage = messages[randomIndex];
+
+            // Display the message in the 'contentArea' div
+            document.getElementById('contentArea').textContent = randomMessage;
+        }
+        // Display a random message when the page first loads
+        window.onload = displayRandomContent;
+    </script>
+</body>
+</html>
